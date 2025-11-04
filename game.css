@@ -1,0 +1,327 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: linear-gradient(135deg, #1A1A2E 0%, #0F0F1A 100%); 
+  min-height: 100vh; 
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  padding: 20px; 
+}
+h1{
+  color: #E0E0E0; 
+  height: 100px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  text-align: center; 
+  margin-bottom: 20px;
+}
+
+h2{
+  color: #BBBBBB;
+}
+
+.hidden {
+  display: none !important; 
+}
+
+.score-container {
+  display: flex;
+  justify-content: space-between;
+  width: 400px; 
+  margin-top: 20px;
+}
+
+#splash-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background: linear-gradient(135deg, #1A1A2E 0%, #0F0F1A 100%);  */
+  background: url(neon-grid-background_53876-91657.jpg) no-repeat center center fixed;
+  background-size: cover;
+  z-index: 100;
+}
+
+.red{
+  color: #E74C3C;
+  font-family: "Rubik 80s Fade", system-ui;
+  font-size: 60px;
+
+}
+
+.green{
+  color: #27AE60;
+  font-family: "Rubik 80s Fade", system-ui;
+  font-size: 45px;
+
+}
+
+.yellow{
+  color: #F1C40F;
+  font-family: "Rubik 80s Fade", system-ui;
+  font-size: 50px;
+
+}
+
+.blue{
+  color: #2980B9;
+  font-family: "Rubik 80s Fade", system-ui;
+  font-size: 40px;
+
+}
+
+
+.purple{
+  color: #16061d;
+  font-family: "Rubik 80s Fade", system-ui;
+  font-size: 70px;
+
+}
+
+
+#splash-screen p {
+  color: #BBBBBB;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+#start-game-btn, #game-over-modal button {
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background-color: #7400d3; 
+  color: #FFFFFF;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #3b00a9;
+  transition: all 0.1s;
+}
+
+#start-game-btn:hover, #game-over-modal button:hover {
+  background-color: #000000;
+  box-shadow: 0 2px 0 #3b00a9;
+  transform: translateY(2px);
+}
+
+.modal-hidden {
+  display: none !important;
+}
+
+#game-over-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.modal-content {
+  background-color: #2D2D44;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+}
+
+.modal-content h2 {
+  color: #D35400;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  color: #E0E0E0;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.modal-content #final-score {
+  font-weight: bold;
+  color: #F39C12;
+}
+
+hr{
+  width: 400px; 
+  margin: auto;
+  border: none;
+  height: 2px;
+  background-color: #33334F;
+}
+
+.center-board{
+  margin-top: 10px; 
+}
+
+#board{
+  width: 400px;
+  height: 400px;
+  background-color: #2D2D44; 
+  border: 8px solid #3A3A5A; 
+  border-radius: 12px; 
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  padding: 2px; 
+  justify-content: center; 
+}
+
+.tile{
+  width: 88px; 
+  height: 88px;
+  border: 4px solid #3A3A5A; 
+  border-radius: 8px; 
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2px; 
+  color: #FFFFFF; 
+  background-color: #444460;
+}
+
+
+.x2{
+  background-color: #2E86C1;
+  color: #FFFFFF;
+}
+
+.x4{
+  background-color: #1ABC9C;
+  color: #FFFFFF;
+}
+
+.x8{
+  background-color: #8E44AD;
+  color: #FFFFFF;
+}
+
+.x16{
+  background-color: #D35400;
+  color: #FFFFFF;
+}
+
+.x32{
+  background-color: #C0392B;
+  color: #FFFFFF;
+}
+
+.x64{
+  background-color: #F39C12;
+  color: #FFFFFF;
+}
+
+.x128{
+  background-color: #27AE60;
+  color: #FFFFFF;
+}
+
+.x256{
+  background-color: #2980B9;
+  color: #FFFFFF;
+}
+
+.x512{
+  background-color: #5D3587;
+  color: #FFFFFF;
+}
+
+.x1024{
+  background-color: #4A235A;
+  color: #FFFFFF;
+  font-size: 30px; /* Smaller font for longer number */
+}
+
+.x2048{
+  background-color: #1B4F72;
+  color: #FFFFFF;
+  font-size: 30px;
+}
+
+/* Beyond 2048, use a deep color like black or a dark metalic */
+.x4096{
+  background-color: #1A1A1A; 
+  color: #F0F0F0;
+  font-size: 25px;
+}
+
+.x8192{
+  background-color: #000000;
+  color: #F0F0F0;
+  font-size: 25px;
+}
+
+
+
+.power-buttons{
+  width: 200px;
+  height: 6vh;
+  margin: auto;
+  border-radius: 8%;
+  margin-top: 20px; 
+  display: flex;
+}
+
+.undo, .restart{
+  width: 70px;
+  height: 100%;
+  border: none; 
+  border-radius: 8px; 
+  font-size: 1.5rem;
+  background-color: #8E44AD; 
+  color: #FFFFFF;
+  margin-left: 20px;
+}
+
+.undo:hover, .restart:hover{
+  cursor: pointer;
+  background-color: #9B59B6; 
+}
+
+.score-container{
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+  margin: auto;
+}
+
+#mute-btn {
+  position: absolute; 
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; 
+  border: none;
+  background-color: #3A3A5A; 
+  color: #E0E0E0; 
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #2D2D44;
+  transition: all 0.1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mute-btn:hover {
+  background-color: #444460;
+  box-shadow: 0 2px 0 #2D2D44;
+}

@@ -356,6 +356,9 @@ function isGameOver() {
 
 
 function showGameOverScreen() {
+    //stops bg
+    backgroundMusic.pause();
+    backgroundMusic.currentTime = 0;
     // Update the final score in the modal
     document.getElementById("final-score").innerText = score; 
     // Show the modal

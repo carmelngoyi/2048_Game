@@ -34,7 +34,7 @@
         
       </div>
       <div class="power-buttons">
-        <button class="undo" id="undo" onclick="undoMove()"><i class="fa-solid fa-rotate-left"></i></button>
+        <button class="undo" id="undo" onclick="undoMove()"><i class="fa-solid fa-rotate-left"></i>Undo</button>
         <button class="restart" id="restart" onclick="restartGame()"><i class="fa-solid fa-arrows-rotate"></i></button>
       </div> 
     </div>
@@ -44,7 +44,7 @@
   <div id="game-over-modal" class="modal-hidden">
     <div class="modal-content">
       <h2>Game Over!</h2>
-      <p>Out of Moves!</p>
+      <h4>Out of Moves!</h4>
       <p>Final Score: <span id="final-score">0</span></p>
       <button onclick="hideGameOverScreen(); restartGame();">Play Again</button>
     </div>

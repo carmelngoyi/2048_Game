@@ -338,3 +338,8 @@ hr{
 .slogan{
   color: #000;
 }
+
+#board {
+    touch-action: none;
+    overscroll-behavior: contain;
+}

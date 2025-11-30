@@ -185,9 +185,16 @@ function slide(row) {
 }
 
 function saveState() {
-    previousBoards.push(JSON.parse(JSON.stringify(board)));
-    if (previousBoards.length > max_undo) previousBoards.shift();
+    previousBoards.push({
+        board: JSON.parse(JSON.stringify(board)),
+        score: score
+    });
+
+    if (previousBoards.length > max_undo) {
+        previousBoards.shift();
+    }
 }
+
 
 function slideLeft() {
     saveState();
@@ -283,15 +290,25 @@ function undoMove() {
         alert("Undo limit reached!");
         return;
     }
-    board = previousBoards.pop();
+
+    const lastState = previousBoards.pop();
+    board = lastState.board;
+    score = lastState.score;
+
     undoCount++;
+
+    // Update all tiles visually
     for (let r = 0; r < rows; r++) {
         for (let c = 0; c < columns; c++) {
             let tile = document.getElementById(`${r}-${c}`);
             updateTile(tile, board[r][c]);
         }
     }
+
+    // Update score display on screen
+    updateScore();
 }
+
 
 function restartGame() {
     // This is called from the game over screen, which also calls hideGameOverScreen()

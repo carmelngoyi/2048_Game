@@ -387,3 +387,59 @@ function playSlideSound() {
     slideSound.currentTime = 0;
     slideSound.play();
 }
+
+
+// Phone Swiping
+
+// Only allow swipe when game is visible
+function gameIsVisible() {
+    return !document.getElementById("game-container").classList.contains("hidden");
+}
+
+let touchStartX = 0;
+let touchStartY = 0;
+let touchEndX = 0;
+let touchEndY = 0;
+
+const swipeArea = document.getElementById("board");
+
+// Touch start
+swipeArea.addEventListener("touchstart", (e) => {
+    if (!gameIsVisible()) return;
+
+    touchStartX = e.changedTouches[0].screenX;
+    touchStartY = e.changedTouches[0].screenY;
+});
+
+// Touch end
+swipeArea.addEventListener("touchend", (e) => {
+    if (!gameIsVisible()) return;
+
+    touchEndX = e.changedTouches[0].screenX;
+    touchEndY = e.changedTouches[0].screenY;
+
+    handleSwipe();
+});
+
+function handleSwipe() {
+    let diffX = touchEndX - touchStartX;
+    let diffY = touchEndY - touchStartY;
+
+    // Horizontal swipe
+    if (Math.abs(diffX) > Math.abs(diffY)) {
+        if (diffX > 50) {
+            slideRight(); // Swipe Right
+        } else if (diffX < -50) {
+            slideLeft(); // Swipe Left
+        }
+    }
+
+    // Vertical swipe
+    else {
+        if (diffY < -50) {
+            slideUp(); // Swipe Up
+        } else if (diffY > 50) {
+            slideDown(); // Swipe Down
+        }
+    }
+}

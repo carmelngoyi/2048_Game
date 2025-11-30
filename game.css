@@ -290,14 +290,14 @@ hr{
 }
 
 .undo, .restart{
-  width: 95px;
-  height: 80px;
+  width: 85px;
+  height: 60px;
   border: none; 
   border-radius: 8px; 
-  font-size: 18px;
+  font-size: 16px;
   background-color: #8E44AD; 
   color: #FFFFFF;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .undo:hover, .restart:hover{

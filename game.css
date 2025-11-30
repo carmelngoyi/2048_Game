@@ -63,48 +63,48 @@ h2{
 .red{
   color: #E74C3C;
   font-family: "Rubik 80s Fade", system-ui;
-  font-size: 60px;
+  font-size: 56px;
 
 }
 
 .green{
   color: #27AE60;
   font-family: "Rubik 80s Fade", system-ui;
-  font-size: 45px;
+  font-size: 41px;
 
 }
 
 .yellow{
   color: #F1C40F;
   font-family: "Rubik 80s Fade", system-ui;
-  font-size: 50px;
+  font-size: 46px;
 
 }
 
 .blue{
   color: #2980B9;
   font-family: "Rubik 80s Fade", system-ui;
-  font-size: 40px;
+  font-size: 36px;
 
 }
 
 .purple{
   color: #770e605e;
   /* font-family: "Rubik 80s Fade", system-ui; */
-  font-size: 70px;
+  font-size: 66px;
   text-decoration: underline;
 }
 
 
 #splash-screen p {
   color: #BBBBBB;
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   margin-bottom: 40px;
 }
 
 #start-game-btn, #game-over-modal button {
   padding: 15px 30px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
   border: none;
   border-radius: 10px;
@@ -155,7 +155,7 @@ h2{
 
 .modal-content p {
   color: #E0E0E0;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin-bottom: 20px;
 }
 

@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2048: Dark Edition</title>
+  <title>2048: Game</title>
   <link rel="stylesheet" href="game.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" type="image/x-icon" href="GameFavicon.png">
   <style>
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Luckiest+Guy&family=Rubik+80s+Fade&display=swap');
 </style>
@@ -14,7 +15,7 @@
 <body>
 
   <div id="splash-screen">
-    <h1><span class="red">2</span><span class="green">0</span><span class="yellow">4</span><span class="blue">8</span>: <span class="purple">Dark Edition</span></h1>
+    <h1><span class="red">2</span><span class="green">0</span><span class="yellow">4</span><span class="blue">8</span> <span class="purple">Game</span></h1>
     <p class="slogan">Merge, move, master.</p>
     <button id="start-game-btn" onclick="startGame()">Start Game</button>
   </div>
@@ -22,7 +23,7 @@
   <div id="game-container" class="hidden">
         <button id="mute-btn" onclick="toggleMusic()"><i id="mute-icon" class="fa-solid fa-volume-high"></i></button>
 
-    <h1><span class="red">2</span><span class="green">0</span><span class="yellow">4</span><span class="blue">8</span>: <span class="purple">Dark Edition</span></h1>
+    <h1><span class="red">2</span><span class="green">0</span><span class="yellow">4</span><span class="blue">8</span> <span class="purple">Game</span></h1>
     <div class="score-container">
       <h2>High Score: <span id="highScore">0</span></h2>
       <h2>Score: <span id="score">0</span></h2>
@@ -35,7 +36,7 @@
       </div>
       <div class="power-buttons">
         <button class="undo" id="undo" onclick="undoMove()"><i class="fa-solid fa-rotate-left"></i>Undo</button>
-        <button class="restart" id="restart" onclick="restartGame()"><i class="fa-solid fa-arrows-rotate"></i></button>
+        <button class="restart" id="restart" onclick="restartGame()"><i class="fa-solid fa-arrows-rotate"></i>New Game</button>
       </div> 
     </div>
   </div>

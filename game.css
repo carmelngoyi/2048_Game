@@ -5,7 +5,10 @@
 }
 
 body{
-  background: linear-gradient(135deg, #1A1A2E 0%, #0F0F1A 100%); 
+  /* background: linear-gradient(135deg, #2e221a 0%, #6e4848 100%);  */
+  /* background: url(2048.gif); */
+  background-color: bisque;
+  background-size: cover;
   min-height: 100vh; 
   font-family: Arial, Helvetica, sans-serif;
   display: flex; 
@@ -19,6 +22,10 @@ h1{
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
   text-align: center; 
   margin-bottom: 20px;
+}
+
+.inner-h1{
+  text-align: left;
 }
 
 h2{
@@ -47,7 +54,8 @@ h2{
   top: 0;
   left: 0;
   /* background: linear-gradient(135deg, #1A1A2E 0%, #0F0F1A 100%);  */
-  background: url(neon-grid-background_53876-91657.jpg) no-repeat center center fixed;
+  /* background: url(neon-grid-background_53876-91657.jpg) no-repeat center center fixed; */
+    background-color: bisque;
   background-size: cover;
   z-index: 100;
 }
@@ -81,11 +89,10 @@ h2{
 }
 
 .purple{
-  color: #0e0113;
-  font-family: "Rubik 80s Fade", system-ui;
+  color: #770e605e;
+  /* font-family: "Rubik 80s Fade", system-ui; */
   font-size: 70px;
-  text-decoration:double underline;
-
+  text-decoration: underline;
 }
 
 
@@ -132,6 +139,7 @@ h2{
 }
 
 .modal-content {
+  width: 400px;
   background-color: #2D2D44;
   padding: 40px;
   border-radius: 15px;
@@ -196,6 +204,7 @@ hr{
   margin: 2px; 
   color: #FFFFFF; 
   background-color: #444460;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 
@@ -285,7 +294,7 @@ hr{
   height: 80px;
   border: none; 
   border-radius: 8px; 
-  font-size: 1.5rem;
+  font-size: 18px;
   background-color: #8E44AD; 
   color: #FFFFFF;
   margin-left: 20px;
@@ -324,4 +333,8 @@ hr{
 #mute-btn:hover {
   background-color: #444460;
   box-shadow: 0 2px 0 #2D2D44;
+}
+
+.slogan{
+  color: #000;
 }

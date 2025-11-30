@@ -11,7 +11,7 @@ const max_undo = 5;
 
 // Sound
 const backgroundMusic = new Audio("game-music-loop-6-144641.mp3"); // Background music
-const slideSound = new Audio("slide.mp3");  // Short sound for tile slides (placeholder)
+const slideSound = new Audio("swipe-132084.mp3");  // Short sound for tile slides (placeholder)
 const mergeSound = new Audio("merge.mp3");  // merge sound
 
 window.onload = function() {
@@ -319,7 +319,7 @@ function loadHighScore() {
 // Game Over
 function checkGameOver() {
     if (isGameOver()) {
-        setTimeout(() => showGameOverScreen(), 2000);
+        setTimeout(() => showGameOverScreen(), 1000);
     }
 }
 
